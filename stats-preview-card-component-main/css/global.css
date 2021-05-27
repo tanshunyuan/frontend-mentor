@@ -1,0 +1,124 @@
+:root {
+  --primary-dark-blue: hsl(233, 47%, 7%);
+  --primary-desaturated-blue: hsl(244, 38%, 16%);
+  --primary-soft-violet: hsl(277, 64%, 61%);
+
+  --heading-color: hsl(0, 0%, 100%);
+  --paragraph-color: hsl(0, 0%, 100%, 0.75);
+  --stats-color: hsl(0, 0%, 100%, 0.6);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--primary-dark-blue);
+  font-family: "Lexend", sans-serif;
+}
+
+/* font-family: 'Inter', sans-serif; */
+
+.accent {
+  color: var(--primary-soft-violet);
+}
+
+h1 {
+  color: var(--heading-color);
+  font-family: "Inter", sans-serif;
+}
+p {
+  color: var(--paragraph-color);
+  font-size: 15px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  display: flex;
+  background-color: var(--primary-desaturated-blue);
+  max-width: 90rem;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: stretch;
+  margin: 5%;
+}
+.card__body {
+  max-width: 60ch;
+  padding: 10%;
+}
+
+.img__container {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-soft-violet);
+  border-radius: 0 1rem 1rem 0;
+  opacity: 0.5;
+}
+.card__img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0 1rem 1rem 0;
+}
+
+.card__stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__heading p {
+  margin: 1rem 0 2rem 0;
+}
+
+.card__stats > li {
+  text-decoration: none;
+  list-style-type: none;
+  color: var(--stats-color);
+  font-size: 0.8rem;
+}
+
+.card__stats > li > span {
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  display: block;
+  font-size: 1.2rem;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    flex-direction: column;
+  }
+  .card__body {
+    order: 2;
+    text-align: center;
+    padding: 5%;
+  }
+  .card__img,
+  .overlay {
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .card__stats {
+    display: block;
+  }
+
+  .card__stats > li {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .card__stats > li > span,
+  h1 {
+    font-size: 2.2rem;
+  }
+}
