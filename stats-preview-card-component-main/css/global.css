@@ -98,6 +98,9 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    height: 100%;
+  }
   .card {
     flex-direction: column;
   }
