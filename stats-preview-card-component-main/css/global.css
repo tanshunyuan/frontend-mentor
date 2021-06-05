@@ -48,8 +48,11 @@ p {
   margin: 5%;
 }
 .card__body {
-  max-width: 60ch;
-  padding: 10%;
+  max-width: 50ch;
+  padding: 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 .img__container {
@@ -82,26 +85,27 @@ p {
   text-decoration: none;
   list-style-type: none;
   color: var(--stats-color);
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .card__stats > li > span {
   font-weight: bold;
   font-family: "Inter", sans-serif;
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--heading-color);
   margin-bottom: 0.5rem;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .card {
     flex-direction: column;
   }
   .card__body {
+    max-width: 100%;
     order: 2;
     text-align: center;
-    padding: 5%;
+    border-radius: 0 0 1rem 1rem;
   }
   .card__img,
   .overlay {
