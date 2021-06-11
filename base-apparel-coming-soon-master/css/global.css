@@ -1,0 +1,121 @@
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+  --white-gradient: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  --pink-gradient: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 20% 80%;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.details-container {
+  padding: 3rem 10rem;
+}
+.logo-container {
+  padding: 3rem 10rem;
+}
+.text-container {
+  height: 100%;
+  padding: 5rem 10rem;
+}
+.text {
+  max-width: 40ch;
+}
+.accent,
+.description {
+  color: var(--desaturated-red);
+}
+.accent {
+  font-weight: 300;
+}
+.description {
+  margin: 1rem 0 2rem 0;
+}
+
+.title {
+  color: var(--dark-grayish-red);
+  text-transform: uppercase;
+  font-size: clamp(3rem, 2vw, 4rem);
+  font-weight: 600;
+  letter-spacing: 1rem;
+}
+.control {
+  position: relative;
+  cursor: pointer;
+}
+.icon {
+  background: var(--pink-gradient);
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 6em;
+  height: 3em;
+  right: 0;
+  border-radius: 9999px;
+}
+.input {
+  display: inline-flex;
+  border-radius: 9999px;
+  padding: 1rem 2rem;
+  border: 1px solid var(--desaturated-red);
+  color: var(--desaturated-red);
+  height: 3rem;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+}
+.image-container {
+  grid-area: 1/2 / span 2;
+  background-image: url("../images/hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .image-container {
+    background-image: url("../images/hero-mobile.jpg");
+    grid-area: unset;
+    grid-row: 2;
+  }
+
+  .container {
+    grid-template-columns: unset;
+    grid-template-rows: 10% 40% 50%;
+  }
+
+  .logo-container {
+    padding: 1rem 2rem;
+    margin: auto 0;
+  }
+  .text-container {
+    display: block;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  .text {
+    max-width: unset;
+  }
+}
