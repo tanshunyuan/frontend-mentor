@@ -14,102 +14,104 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 13px;
   font-weight: 500;
-}
-.container {
-  display: grid;
-  place-items: center;
-  height: 100%;
+  background-color: var(--light-grayish-blue);
 }
 
-.preview-wrapper {
+.container {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.card {
   display: grid;
   grid-template-columns: 40% 60%;
-  width: 50%;
+  background-color: white;
+  max-width: 750px;
+  box-shadow: 5px 5px 20px hsl(0deg 0% 50% / 10%);
+  border-radius: 1rem;
 }
-.preview-image {
+.image {
   width: 100%;
+  height: 100%;
+  display: block;
   border-radius: 1rem 0 0 1rem;
+}
+
+.detail-content {
+  padding: 1rem 1.5rem;
+}
+.avatar {
+  border-radius: 9999px;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
 }
 .title {
   color: var(--very-dark-grayish-blue);
-  font-size: clamp(1.2rem, 2vw, 26px);
+  font-weight: 700;
 }
 .description {
+  margin: 1rem 0;
   color: var(--desaturated-dark-blue);
+}
+
+.name,
+.share-btn {
+  color: var(--very-dark-grayish-blue);
 }
 .date {
   color: var(--grayish-blue);
 }
 
-.details {
-  border: 1px solid;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-.details-content {
-  padding: 1.5rem 1rem 0 1rem;
-}
-.icons {
-  display: flex;
-}
 .icon {
-  color: var(--very-dark-grayish-blue);
   font-size: 1.5rem;
-  height: 1em;
-  width: 1em;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+}
+
+.share-btn {
+  border-radius: 50%;
+  margin-left: auto;
+  width: 1.3em;
+  height: 1.3em;
+  z-index: 999;
+}
+.share-btn:hover {
+  background-color: var(--desaturated-dark-blue);
+  color: white;
 }
 
 .profile {
   display: flex;
-  align-items: center;
-  padding: 1rem;
-}
-.end {
-  margin-left: auto;
-}
-.share {
-  border-radius: 9999px;
-  border: 0;
-  cursor: pointer;
-  height: 2rem;
-  width: 2rem;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-.share:hover {
-  background-color: var(--very-dark-grayish-blue);
-  color: white;
-}
-
-.share-actions {
   position: relative;
-  margin-left: auto;
+  width: 100%;
+  align-items: center;
+  padding: 1rem 1.5rem;
 }
 
-.avatar {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  margin-right: 1rem;
+.share-text {
+  letter-spacing: 5px;
+  font-size: 22px;
+  color: white;
+  font-weight: 500;
 }
 
-.share-container {
+.share-tooltip {
+  background-color: var(--very-dark-grayish-blue);
   display: flex;
   align-items: center;
-  font-size: 2rem;
-  padding: 1rem 2rem;
-  background-color: var(--very-dark-grayish-blue);
-  border-radius: 1rem;
-  visibility: hidden;
   position: absolute;
-  transform: translate(148%, 212%);
+  padding: 1rem 2rem;
+  visibility: hidden;
+  transform: translate(90%, -100%);
+  border-radius: 1rem;
 }
 
-.share-container::after {
+.share-tooltip::after {
   content: "";
   position: absolute;
   width: 20px;
@@ -120,48 +122,41 @@ body {
   background-color: var(--very-dark-grayish-blue);
 }
 
+.share-tooltip > *:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.tooltip-icon {
+  background-color: transparent;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .image {
+    border-radius: 1rem 1rem 0 0;
+  }
+  .card {
+    width: 90%;
+    max-width: 450px;
+    grid-template-columns: 1fr;
+    border-radius: 1rem;
+  }
+
+  .share-tooltip {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 1rem 1rem;
+    left: 0;
+    transform: unset;
+  }
+  .share-tooltip::after {
+    content: none;
+  }
+}
+
 .hidden {
   visibility: hidden;
 }
 .show {
   visibility: visible;
-}
-.share-text {
-  font-size: 0.8rem;
-  letter-spacing: 5px;
-  color: var(--grayish-blue);
-}
-.icons > *:not(:last-child),
-.share-text {
-  margin-right: 1rem;
-}
-.name {
-  margin-bottom: 0.5rem;
-}
-
-.white {
-  color: white;
-}
-
-@media screen and (max-width: 768px) {
-  .preview-wrapper {
-    grid-template-columns: auto;
-    width: 90%;
-    max-width: 350px;
-  }
-  .preview-image {
-    border-radius: 1rem 1rem 0 0;
-  }
-  .description {
-    margin: 1rem 0;
-  }
-
-  .share-container {
-    transform: unset;
-    width: 90%;
-  }
-
-  .share-container::after {
-    content: none;
-  }
 }

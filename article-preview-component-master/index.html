@@ -25,11 +25,13 @@
     <link rel="stylesheet" href="./css/global.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="preview-wrapper">
-        <img class="preview-image" src="./images/drawers.jpg" alt="" />
-        <div class="details">
-          <div class="details-content">
+    <main class="container">
+      <div class="card">
+        <section class="image-container">
+          <img class="image" src="./images/drawers.jpg" alt="" />
+        </section>
+        <section class="detail-wrapper">
+          <div class="detail-content">
             <h1 class="title">
               Shift the overall look and feel by adding these wonderful touches
               to furniture in your home
@@ -46,29 +48,25 @@
               <h4 class="name">Michelle Appleton</h4>
               <p class="date">28 Jun 2020</p>
             </div>
-            <div class="share-actions">
-              <span class="icon end share">
-                <ion-icon name="share-alt"></ion-icon>
-              </span>
-            </div>
-          </div>
-          <div class="share-container">
-            <p class="share-text">SHARE</p>
-            <div class="icons">
-              <span class="icon white">
+            <button type="button" class="icon end share-btn">
+              <ion-icon name="share-alt"></ion-icon>
+            </button>
+            <div class="share-tooltip">
+              <span class="share-text">SHARE</span>
+              <button type="button" class="tooltip-icon icon white">
                 <ion-icon name="logo-pinterest"></ion-icon>
-              </span>
-              <span class="icon white">
+              </button>
+              <button type="button" class="tooltip-icon icon white">
                 <ion-icon name="logo-facebook"></ion-icon>
-              </span>
-              <span class="icon white">
+              </button>
+              <button type="button" class="tooltip-icon icon white">
                 <ion-icon name="logo-twitter"></ion-icon>
-              </span>
+              </button>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </main>
     <script src="./scripts/index.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </body>
