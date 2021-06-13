@@ -40,13 +40,16 @@ body {
 .date {
   color: var(--grayish-blue);
 }
+
 .details {
   border: 1px solid;
-  padding: 2rem;
   height: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+}
+.details-content {
+  padding: 1.5rem 1rem 0 1rem;
 }
 .icons {
   display: flex;
@@ -62,6 +65,7 @@ body {
 .profile {
   display: flex;
   align-items: center;
+  padding: 1rem;
 }
 .end {
   margin-left: auto;
@@ -86,9 +90,6 @@ body {
   margin-left: auto;
 }
 
-.none {
-  display: none;
-}
 .avatar {
   width: 4rem;
   height: 4rem;
@@ -96,17 +97,34 @@ body {
   margin-right: 1rem;
 }
 
-.share-details {
+.share-container {
   display: flex;
   align-items: center;
   font-size: 2rem;
   padding: 1rem 2rem;
   background-color: var(--very-dark-grayish-blue);
   border-radius: 1rem;
+  visibility: hidden;
+  position: absolute;
+  transform: translate(148%, 212%);
 }
 
-.block {
-  display: block;
+.share-container::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: -10px;
+  left: 45%;
+  transform: rotate(45deg);
+  background-color: var(--very-dark-grayish-blue);
+}
+
+.hidden {
+  visibility: hidden;
+}
+.show {
+  visibility: visible;
 }
 .share-text {
   font-size: 0.8rem;
@@ -128,13 +146,22 @@ body {
 @media screen and (max-width: 768px) {
   .preview-wrapper {
     grid-template-columns: auto;
-    width: auto;
-    padding: 10px;
+    width: 90%;
+    max-width: 350px;
   }
   .preview-image {
     border-radius: 1rem 1rem 0 0;
   }
   .description {
     margin: 1rem 0;
+  }
+
+  .share-container {
+    transform: unset;
+    width: 90%;
+  }
+
+  .share-container::after {
+    content: none;
   }
 }
