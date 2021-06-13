@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Blogr]</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/global.css" />
+  </head>
+  <body>
+    <main>
+      <section class="landing">
+        <nav class="navbar">
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              <img src="./images/logo.svg" alt="" />
+            </a>
+            <div class="navbar-button">
+              <div class="navbar-burger"></div>
+            </div>
+          </div>
+          <div class="navbar-menu">
+            <div class="navbar-start">
+              <div class="navbar-item has-dropdown">
+                <a class="navbar-link"
+                  >Product
+                  <span class="arrow"></span>
+                </a>
+                <div class="navbar-dropdown">
+                  <a class="navbar-item">Overview</a>
+                  <a class="navbar-item">Pricing</a>
+                  <a class="navbar-item">Marketplace</a>
+                  <a class="navbar-item">Features</a>
+                  <a class="navbar-item">Integrations</a>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown">
+                <a class="navbar-link"
+                  >Company
+                  <span class="arrow"></span>
+                </a>
+                <div class="navbar-dropdown">
+                  <a class="navbar-item">About</a>
+                  <a class="navbar-item">Team</a>
+                  <a class="navbar-item">Blog</a>
+                  <a class="navbar-item">Careers</a>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown">
+                <a class="navbar-link"
+                  >Connect
+                  <span class="arrow"></span>
+                </a>
+                <div class="navbar-dropdown">
+                  <a class="navbar-item">Contact</a>
+                  <a class="navbar-item">Newsletter</a>
+                  <a class="navbar-item">LinkedIn</a>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <button class="button">Login</button>
+              </div>
+              <div class="navbar-item">
+                <button class="button is-light">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <h1>A modern publishing platform</h1>
+        <p>Grow your audience and build your online brand</p>
+        <div class="buttons">
+          <button class="button is-light" type="button">Start For Free</button>
+          <button class="button is-outline" type="button">Learn More</button>
+        </div>
+      </section>
+      <section>
+        <h2>Designed for the future</h2>
+        <div>
+          <div>
+            <article>
+              <h3>Introducing an extensible editor</h3>
+              <p>
+                Blogr features an exceedingly intuitive interface which lets you
+                focus on one thing: creating content. The editor supports
+                management of multiple blogs and allows easy manipulation of
+                embeds such as images, videos, and Markdown. Extensibility with
+                plugins and themes provide easy ways to add functionality or
+                change the looks of a blog.
+              </p>
+            </article>
+            <article>
+              <h3>Robust content management</h3>
+              <p>
+                Flexible content management enables users to easily move through
+                posts. Increase the usability of your blog by adding customized
+                categories, sections, format, or flow. With this functionality,
+                you’re in full control.
+              </p>
+            </article>
+          </div>
+          <div>
+            <img src="./images/illustration-editor-desktop.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <img src="./images/illustration-phones.svg" alt="" />
+        </div>
+        <article>
+          <h2>State of the Art Infrastructure</h2>
+          <p>
+            With reliability and speed in mind, worldwide data centers provide
+            the backbone for ultra-fast connectivity. This ensures your site
+            will load instantly, no matter where your readers are, keeping your
+            site competitive.
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <div>
+          <img src="./images/illustration-laptop-desktop.svg" alt="" />
+        </div>
+        <article>
+          <h3>Free, open, simple</h3>
+          <p>
+            Blogr is a free and open source application backed by a large
+            community of helpful developers. It supports features such as code
+            syntax highlighting, RSS feeds, social media integration,
+            third-party commenting tools, and works seamlessly with Google
+            Analytics. The architecture is clean and is relatively easy to
+            learn.
+          </p>
+        </article>
+        <article>
+          <h3>Powerful tooling</h3>
+          <p>
+            Batteries included. We built a simple and straightforward CLI tool
+            that makes customization and deployment a breeze, but capable of
+            producing even the most complicated sites.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li>Overview</li>
+          <li>Pricing</li>
+          <li>Marketplace</li>
+          <li>Features</li>
+          <li>Integrations</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li>About</li>
+          <li>Team</li>
+          <li>Blog</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li>Contact</li>
+          <li>Newsletter</li>
+          <li>LinkedIn</li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

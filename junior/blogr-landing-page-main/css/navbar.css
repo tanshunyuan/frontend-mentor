@@ -1,0 +1,78 @@
+.navbar-button {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+.navbar-burger {
+  height: 2px;
+  width: 10px;
+  background-color: var(--white);
+}
+.navbar-burger::before,
+.navbar-burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 10px;
+  background-color: var(--white);
+}
+.navbar-burger::before {
+  transform: translateY(-8px);
+}
+.navbar-burger::after {
+  transform: translateY(8px);
+}
+.navbar-button.open .navbar-burger {
+  background: transparent;
+}
+.navbar-button.open .navbar-burger::before {
+  transform: rotate(45deg);
+}
+.navbar-button.open .navbar-burger::after {
+  transform: rotate(-45deg);
+}
+.navbar-dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 5%;
+}
+
+.navbar,
+.navbar-start,
+.navbar-end {
+  display: flex;
+}
+
+.navbar-item {
+  display: flex;
+  padding: 1rem 2rem;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    text-align: center;
+    background-color: var(--white);
+    width: 90%;
+    border-radius: 0.25rem;
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%);
+  }
+  .navbar-item,
+  .navbar-button {
+    display: block;
+  }
+}
