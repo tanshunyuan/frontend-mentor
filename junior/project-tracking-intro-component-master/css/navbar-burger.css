@@ -1,0 +1,39 @@
+.navbar-btn {
+  font-size: 1.5rem;
+  display: none;
+}
+.navbar-burger {
+  width: 1em;
+  height: 2px;
+  background-color: black;
+}
+.navbar-burger::before,
+.navbar-burger::after {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 2px;
+  background-color: black;
+}
+.navbar-burger::before {
+  transform: translateY(8px);
+}
+.navbar-burger::after {
+  transform: translateY(-8px);
+}
+
+.open .navbar-burger {
+  background: transparent;
+}
+.open .navbar-burger::before {
+  transform: rotate(45deg);
+}
+.open .navbar-burger::after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-btn {
+    display: block;
+  }
+}

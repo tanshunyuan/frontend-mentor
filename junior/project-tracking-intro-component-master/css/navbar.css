@@ -1,3 +1,4 @@
+@import url("./navbar-burger.css");
 .navbar {
   margin: 5rem 8rem;
 }
@@ -9,40 +10,6 @@
 }
 .navbar-item:not(:last-child) {
   margin-right: 3rem;
-}
-
-.navbar-btn {
-  font-size: 1.5rem;
-  display: none;
-}
-.navbar-burger {
-  width: 1em;
-  height: 2px;
-  background-color: black;
-}
-.navbar-burger::before,
-.navbar-burger::after {
-  content: "";
-  position: absolute;
-  width: 1em;
-  height: 2px;
-  background-color: black;
-}
-.navbar-burger::before {
-  transform: translateY(8px);
-}
-.navbar-burger::after {
-  transform: translateY(-8px);
-}
-
-.open .navbar-burger {
-  background: transparent;
-}
-.open .navbar-burger::before {
-  transform: rotate(45deg);
-}
-.open .navbar-burger::after {
-  transform: rotate(-45deg);
 }
 
 .navbar,
@@ -66,20 +33,19 @@
 }
 
 @media screen and (max-width: 768px) {
+  .navbar {
+    margin: 1rem;
+    position: relative;
+  }
   .navbar-item:not(:last-child) {
     margin: 0;
   }
-  .navbar-btn,
   .navbar-end {
     display: flex;
   }
   .navbar-end {
     flex-direction: column;
     margin: 1rem;
-  }
-  .navbar {
-    margin: 1rem;
-    position: relative;
   }
   .navbar-menu {
     z-index: 99;
