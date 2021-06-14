@@ -1,4 +1,5 @@
 .footer {
+  padding: 5rem 8rem;
   background-color: var(--very-dark-black-blue);
   border-top-right-radius: 5rem;
   width: 100%;
@@ -6,13 +7,23 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-
+.footer > div > h4 {
+  font-weight: 600;
+  font-family: "Ubuntu", sans-serif;
+  margin-bottom: 2rem;
+}
 .footer > div > ul > li {
   list-style-type: none;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--grayish-blue);
+  margin-bottom: 1em;
 }
 
 @media screen and (max-width: 768px) {
   .footer {
     grid-template-columns: 1fr;
+    padding: 2rem 2rem;
+    text-align: center;
   }
 }

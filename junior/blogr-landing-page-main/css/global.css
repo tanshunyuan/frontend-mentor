@@ -20,7 +20,7 @@
 body {
   height: 100vh;
 }
-
+h1,
 h2,
 h3 {
   color: var(--very-dark-blue);
@@ -35,6 +35,7 @@ p {
 }
 
 .landing {
+  padding: 2rem 5rem;
   border-bottom-left-radius: 5rem;
   background: linear-gradient(
     90deg,
@@ -43,16 +44,31 @@ p {
   );
 }
 
+.landing-text {
+  margin: 5rem 0;
+  text-align: center;
+}
+.landing-text .detail-description {
+  margin-bottom: 50px;
+}
+
 .show {
   display: block;
 }
 
 .button {
-  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
   border-radius: 9999px;
   border: none;
   background-color: transparent;
   color: white;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.button:not(:last-child) {
+  margin-right: 1em;
 }
 
 .is-light {
@@ -67,6 +83,18 @@ p {
 a {
   text-decoration: none;
 }
+
+.landing-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.landing-text .detail-text {
+  font-size: clamp(1.8rem, 2vw, 4rem);
+}
+
 .rotate-180 {
   transform: rotate(180deg);
   transform-origin: center center;
@@ -78,6 +106,7 @@ a {
   background-repeat: no-repeat;
   width: 10px;
   height: 8px;
+  margin-left: 1em;
 }
 .editor {
   position: relative;
@@ -139,11 +168,6 @@ a {
   top: -300px;
 }
 
-.phones-text {
-}
-.phones-text > * {
-  color: var(--white);
-}
 .laptop {
   padding: 200px 0;
 }
@@ -151,6 +175,7 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   align-items: center;
+  margin: 0 5rem;
 }
 .laptop-image-container {
   position: relative;
@@ -158,11 +183,14 @@ a {
 
 .laptop-image {
   position: relative;
-  left: -17rem;
+  left: -22rem;
   top: 0;
 }
 
 @media screen and (max-width: 768px) {
+  .landing {
+    padding: 1rem 1.5rem;
+  }
   .arrow {
     background-image: url("../images/icon-arrow-dark.svg");
   }
@@ -178,15 +206,36 @@ a {
   .laptop-image-container {
     position: static;
   }
-  .editor-content,
+  .editor-container,
   .laptop-container,
   .phones-container {
     grid-template-columns: 1fr;
+    margin: 0 2rem;
+    padding: 2rem 0;
+  }
+  .phones-container {
+    grid-template-rows: 1fr 1fr;
+  }
+  .laptop-image,
+  .editor-image {
+    position: static;
+    width: 100%;
+  }
+  .phones {
+    padding-bottom: 0;
+  }
+  .phones-container {
+    position: relative;
+  }
+  .phones-image-container {
+    position: static;
   }
   .phones-image {
-    transform: translateY(-20rem);
-  }
-  .laptop-text {
-    grid-area: unset;
+    width: 400px;
+    height: 450px;
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transform: translateX(-50%);
   }
 }
