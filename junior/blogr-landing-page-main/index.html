@@ -90,13 +90,13 @@
           <button class="button is-outline" type="button">Learn More</button>
         </div>
       </section>
-      <section>
-        <h2>Designed for the future</h2>
-        <div>
-          <div>
-            <article>
-              <h3>Introducing an extensible editor</h3>
-              <p>
+      <section class="editor">
+        <h2 class="editor-header">Designed for the future</h2>
+        <div class="editor-container">
+          <div class="editor-text">
+            <article class="detail">
+              <h3 class="detail-header">Introducing an extensible editor</h3>
+              <p class="detail-description">
                 Blogr features an exceedingly intuitive interface which lets you
                 focus on one thing: creating content. The editor supports
                 management of multiple blogs and allows easy manipulation of
@@ -105,9 +105,9 @@
                 change the looks of a blog.
               </p>
             </article>
-            <article>
-              <h3>Robust content management</h3>
-              <p>
+            <article class="detail">
+              <h3 class="detail-header">Robust content management</h3>
+              <p class="detail-description">
                 Flexible content management enables users to easily move through
                 posts. Increase the usability of your blog by adding customized
                 categories, sections, format, or flow. With this functionality,
@@ -115,53 +115,91 @@
               </p>
             </article>
           </div>
-          <div>
-            <img src="./images/illustration-editor-desktop.svg" alt="" />
+          <div class="editor-image-container">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcset="./images/illustration-editor-mobile.svg"
+              />
+              <img
+                class="editor-image"
+                src="./images/illustration-editor-desktop.svg"
+                alt=""
+              />
+            </picture>
           </div>
         </div>
       </section>
 
-      <section>
-        <div>
-          <img src="./images/illustration-phones.svg" alt="" />
+      <section class="phones">
+        <div class="phones-container">
+          <div class="phones-image-container">
+            <img
+              class="phones-image"
+              src="./images/illustration-phones.svg"
+              alt=""
+            />
+          </div>
+          <div class="phones-text">
+            <article class="detail">
+              <h2 class="detail-header has-text-white">
+                State of the Art Infrastructure
+              </h2>
+              <p class="detail-description has-text-white">
+                With reliability and speed in mind, worldwide data centers
+                provide the backbone for ultra-fast connectivity. This ensures
+                your site will load instantly, no matter where your readers are,
+                keeping your site competitive.
+              </p>
+            </article>
+          </div>
         </div>
-        <article>
-          <h2>State of the Art Infrastructure</h2>
-          <p>
-            With reliability and speed in mind, worldwide data centers provide
-            the backbone for ultra-fast connectivity. This ensures your site
-            will load instantly, no matter where your readers are, keeping your
-            site competitive.
-          </p>
-        </article>
       </section>
 
-      <section>
-        <div>
-          <img src="./images/illustration-laptop-desktop.svg" alt="" />
+      <section class="laptop">
+        <div class="laptop-container">
+          <div class="laptop-image-container">
+            <picture>
+              <source
+                srcset="./images/illustration-laptop-mobile.svg"
+                media="(max-width: 768px)"
+              />
+              <img
+                class="laptop-image"
+                src="./images/illustration-laptop-desktop.svg"
+                alt=""
+              />
+            </picture>
+          </div>
+          <div class="laptop-text">
+            <article class="detail">
+              <h3 class="detail-header">Free, open, simple</h3>
+              <p class="detail-description">
+                Blogr is a free and open source application backed by a large
+                community of helpful developers. It supports features such as
+                code syntax highlighting, RSS feeds, social media integration,
+                third-party commenting tools, and works seamlessly with Google
+                Analytics. The architecture is clean and is relatively easy to
+                learn.
+              </p>
+            </article>
+            <article class="detail">
+              <h3 class="detail-header">Powerful tooling</h3>
+              <p class="detail-description">
+                Batteries included. We built a simple and straightforward CLI
+                tool that makes customization and deployment a breeze, but
+                capable of producing even the most complicated sites.
+              </p>
+            </article>
+          </div>
         </div>
-        <article>
-          <h3>Free, open, simple</h3>
-          <p>
-            Blogr is a free and open source application backed by a large
-            community of helpful developers. It supports features such as code
-            syntax highlighting, RSS feeds, social media integration,
-            third-party commenting tools, and works seamlessly with Google
-            Analytics. The architecture is clean and is relatively easy to
-            learn.
-          </p>
-        </article>
-        <article>
-          <h3>Powerful tooling</h3>
-          <p>
-            Batteries included. We built a simple and straightforward CLI tool
-            that makes customization and deployment a breeze, but capable of
-            producing even the most complicated sites.
-          </p>
-        </article>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
+      <a class="logo">
+        <img src="./images/logo.svg" alt="" />
+      </a>
+
       <div>
         <h4>Product</h4>
         <ul>

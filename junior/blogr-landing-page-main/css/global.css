@@ -1,4 +1,5 @@
 @import url("./navbar.css");
+@import url("./footer.css");
 :root {
   --light-red: hsl(356, 100%, 66%);
   --very-light-red: hsl(355, 100%, 74%);
@@ -18,6 +19,19 @@
 /* font-family: 'Ubuntu', sans-serif; */
 body {
   height: 100vh;
+}
+
+h2,
+h3 {
+  color: var(--very-dark-blue);
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+}
+p {
+  color: var(--very-dark-grayish-blue);
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
 }
 
 .landing {
@@ -65,9 +79,114 @@ a {
   width: 10px;
   height: 8px;
 }
+.editor {
+  position: relative;
+  padding: 200px 0;
+  overflow-x: hidden;
+}
+.editor-header {
+  text-align: center;
+  font-size: 32px;
+}
+.editor-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  margin: 0 5rem;
+  align-items: center;
+}
+
+.editor-image {
+  position: relative;
+  top: 0;
+  right: -20.5rem;
+}
+.has-text-white {
+  color: var(--white);
+}
+.detail {
+  margin-bottom: 3rem;
+}
+.detail-header {
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+.detail-description {
+  font-weight: 400;
+}
+
+.phones {
+  background: linear-gradient(to right, #25252d, #3f4164);
+  border-radius: 0 100px 0 100px;
+  padding: 8rem 0;
+}
+
+.phones-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  align-items: center;
+  margin: 0 5rem;
+  justify-content: space-between;
+}
+
+.phones-image-container {
+  position: relative;
+}
+
+.phones-image {
+  background: url("../images/bg-pattern-circles.svg") no-repeat center -50px / cover;
+  position: absolute;
+  top: -300px;
+}
+
+.phones-text {
+}
+.phones-text > * {
+  color: var(--white);
+}
+.laptop {
+  padding: 200px 0;
+}
+.laptop-container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  align-items: center;
+}
+.laptop-image-container {
+  position: relative;
+}
+
+.laptop-image {
+  position: relative;
+  left: -17rem;
+  top: 0;
+}
 
 @media screen and (max-width: 768px) {
   .arrow {
     background-image: url("../images/icon-arrow-dark.svg");
+  }
+  .editor,
+  .phones,
+  .laptop {
+    text-align: center;
+  }
+  .editor-text {
+    order: 2;
+  }
+  .editor-image-container,
+  .laptop-image-container {
+    position: static;
+  }
+  .editor-content,
+  .laptop-container,
+  .phones-container {
+    grid-template-columns: 1fr;
+  }
+  .phones-image {
+    transform: translateY(-20rem);
+  }
+  .laptop-text {
+    grid-area: unset;
   }
 }

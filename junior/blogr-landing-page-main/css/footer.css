@@ -1,0 +1,18 @@
+.footer {
+  background-color: var(--very-dark-black-blue);
+  border-top-right-radius: 5rem;
+  width: 100%;
+  color: var(--white);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer > div > ul > li {
+  list-style-type: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
+}
