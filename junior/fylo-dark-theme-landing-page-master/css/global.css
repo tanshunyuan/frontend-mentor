@@ -4,17 +4,182 @@
 :root {
   --bg-intro: hsl(217, 28%, 15%);
   --bg-main: hsl(218, 28%, 13%);
-  --bg-main: hsl(216, 53%, 9%);
+  --bg-footer: hsl(216, 53%, 9%);
   --bg-testimonial: hsl(219, 30%, 18%);
   --grad-cyan: hsl(176, 68%, 64%);
   --grad-blue: hsl(198, 60%, 50%);
   --error: hsl(0, 100%, 63%);
   --white: hsl(0, 0%, 100%);
 }
-/* font-family: "Open Sans", sans-serif; */
-/* font-family: "Raleway", sans-serif; */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+img {
+  display: block;
+  /* width: 100%; */
+}
+body {
+  background-color: var(--bg-main);
+  font-family: "Raleway", sans-serif;
+  font-size: 0.875rem;
+  color: var(--white);
+}
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.landing {
+  background-color: var(--bg-intro);
+}
+.landing-image-wrapper {
+  margin: 1rem 1.5rem;
+}
+.logo,
+.landing-image {
+  width: 100%;
+}
+.landing-details {
+  text-align: center;
+  color: var(--white);
+  margin: 1rem 1.5rem;
+}
+.title {
+  font-size: 1.25rem;
+}
+.description {
+  font-size: 0.75rem;
+  margin: 1rem 0;
+}
+
+.product-details {
+  margin: 5rem 1.5rem;
+}
+.card {
+  color: white;
+  text-align: center;
+}
+.card-image {
+  margin: 0 auto;
+}
+.card-details {
+  margin: 3rem 0;
+}
+.card-title {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+}
+
+.marketing-details {
+  padding: 4rem 1.5rem;
+}
+.banner {
+  width: 100%;
+}
+.banner-wrapper {
+  margin: 2rem 0;
+}
+
+.marketing-title {
+  font-size: 1.25rem;
+}
+.active-link {
+  background: none;
+  border: none;
+  color: var(--grad-cyan);
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid;
+}
+
+.active-link::after {
+  content: url("../images/icon-arrow.svg");
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.marketing-title,
+.marketing-description {
+  margin-bottom: 1rem;
+}
+
+.reviews {
+  padding: 2rem;
+}
+.review-card {
+  background-color: var(--bg-intro);
+  margin-bottom: 2rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  padding: 1rem 1.5rem;
+}
+.review-description {
+  line-height: 1.75;
+  font-size: 0.7rem;
+  margin-bottom: 1em;
+}
+.profile {
+  display: flex;
+  align-items: center;
+}
+.profile-details {
+  font-size: 0.6rem;
+}
+.profile-image {
+  border-radius: 50%;
+  font-size: 1.75rem;
+  width: 1em;
+  height: 1em;
+  margin-right: 1rem;
+}
+
+.footer {
+  background-color: var(--bg-footer);
+  color: var(--white);
+  font-family: "Open Sans", sans-serif;
+  padding: 4rem 1.5rem;
+  font-size: 1rem;
+}
+
+.footer > div > ul > li {
+  text-decoration: none;
+  list-style-type: none;
+  margin-bottom: 1em;
+}
+
+.text-w-icon {
+  display: flex;
+}
+.text-w-icon .icon,
+.contact-details > .text-w-icon {
+  margin-right: 0.5em;
+}
+
+.newsletter {
+  background-color: var(--bg-intro);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.newsletter-title,
+.newsletter-description {
+  margin: 1rem;
+}
+
+.footer > div,
+.footer img {
+  margin-bottom: 3rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  width: 1em;
+  height: 1em;
+}
+
+.social-icons .icon:nth-of-type(2) {
+  margin: 0 2rem;
+}
+
+.social-icons {
+  text-align: center;
 }

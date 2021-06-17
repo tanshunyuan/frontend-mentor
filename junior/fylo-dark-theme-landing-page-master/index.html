@@ -23,26 +23,22 @@
     </title>
   </head>
   <body>
-    <nav>
-      <div class="navbar-brand">
-        <div class="logo-container">
-          <img src="./images/logo.svg" alt="" />
-        </div>
-        <div class="navbar-btn">
-          <div class="navbar-burger"></div>
-        </div>
-      </div>
-      <div class="navbar-menu">
-        <div class="navbar-end">
-          <div class="navbar-item">Features</div>
-          <div class="navbar-item">Team</div>
-          <div class="navbar-item">Sign In</div>
-        </div>
-      </div>
-    </nav>
-
     <main>
       <section class="landing">
+        <nav class="navbar">
+          <div class="navbar-brand">
+            <div class="logo-container">
+              <img class="logo" src="./images/logo.svg" alt="" />
+            </div>
+          </div>
+          <div class="navbar-menu">
+            <div class="navbar-end">
+              <div class="navbar-item">Features</div>
+              <div class="navbar-item">Team</div>
+              <div class="navbar-item">Sign In</div>
+            </div>
+          </div>
+        </nav>
         <div class="landing-image-wrapper">
           <img
             class="landing-image"
@@ -50,7 +46,7 @@
             alt=""
           />
         </div>
-        <div class="details">
+        <div class="landing-details">
           <h1 class="title">
             All your files in one secure location, accessible anywhere.
           </h1>
@@ -127,7 +123,7 @@
         <div class="banner-wrapper">
           <img
             class="banner"
-            src="./images/illustration-stay-productive.pngl"
+            src="./images/illustration-stay-productive.png"
             alt=""
           />
         </div>
@@ -141,7 +137,7 @@
             Securely share files and folders with friends, family and colleagues
             for live collaboration. No email attachments required.
           </p>
-          <button class="btn">See how Fylo works</button>
+          <button class="active-link">See how Fylo works</button>
         </div>
       </section>
       <section class="reviews">
@@ -166,7 +162,7 @@
             collaboration machine.
           </p>
           <div class="profile">
-            <img class="profile-image" src="./images/profile-1.jpg" alt="" />
+            <img class="profile-image" src="./images/profile-2.jpg" alt="" />
             <div class="profile-details">
               <h4 class="profile-name">Bruce McKenzie</h4>
               <p class="profile-title">Founder & CEO, Huddle</p>
@@ -180,7 +176,7 @@
             collaboration machine.
           </p>
           <div class="profile">
-            <img class="profile-image" src="./images/profile-1.jpg" alt="" />
+            <img class="profile-image" src="./images/profile-3.jpg" alt="" />
             <div class="profile-details">
               <h4 class="profile-name">Iva Boyd</h4>
               <p class="profile-title">Founder & CEO, Huddle</p>
@@ -207,8 +203,10 @@
     <footer class="footer">
       <div>
         <img src="./images/logo.svg" class="footer-image" alt="" />
-        <div>
-          <img src="./images/icon-location.svg" alt="" />
+        <div class="text-w-icon">
+          <div class="icon">
+            <ion-icon name="location-outline"></ion-icon>
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua
@@ -216,17 +214,19 @@
         </div>
       </div>
 
-      <div>
-        <p>
-          <span>
-            <img src="./images/icon-phone.svg" alt="" />
-          </span>
-          +1-543-123-4567
-        </p>
-        <p>
-          <span><img src="./images/icon-email.svg" alt="" /></span>
-          example@fylo.com
-        </p>
+      <div class="contact-details">
+        <div class="text-w-icon">
+          <div class="icon">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+          <p>+1-543-123-4567</p>
+        </div>
+        <div class="text-w-icon">
+          <div class="icon">
+            <ion-icon name="mail-outline"></ion-icon>
+          </div>
+          <p>example@fylo.com</p>
+        </div>
       </div>
 
       <div>
@@ -244,9 +244,20 @@
           <li>Privacy</li>
         </ul>
       </div>
+
+      <div class="social-icons">
+        <span class="icon">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </span>
+        <span class="icon">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </span>
+        <span class="icon">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </span>
+      </div>
     </footer>
 
-    <ion-icon name="heart"></ion-icon>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
   </body>
 </html>
