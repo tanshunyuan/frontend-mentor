@@ -52,23 +52,17 @@ p {
   font-size: 0.75rem;
   margin: 1rem 0;
 }
+@media all and (min-width: 768px) {
+  .product-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 1rem;
+  }
+}
 
 .product-details {
   margin: 5rem 1.5rem;
-}
-.card {
-  color: white;
-  text-align: center;
-}
-.card-image {
-  margin: 0 auto;
-}
-.card-details {
-  margin: 3rem 0;
-}
-.card-title {
-  margin: 1rem 0;
-  font-size: 1.25rem;
 }
 
 .marketing-details {
