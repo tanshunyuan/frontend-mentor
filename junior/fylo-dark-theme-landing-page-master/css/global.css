@@ -100,7 +100,17 @@ p {
 .reviews {
   padding: 2rem;
 }
+.reviews::before {
+  content: open-quote;
+  /* content: url("../images/bg-quotes.png"); */
+  color: var(--grad-cyan);
+  font-size: 10rem;
+  position: absolute;
+  transform: translate(0px, -70px);
+  z-index: 1;
+}
 .review-card {
+  position: relative;
   background-color: var(--bg-intro);
   margin-bottom: 2rem;
   font-size: 0.75rem;
