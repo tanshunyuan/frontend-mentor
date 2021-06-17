@@ -15,7 +15,7 @@
 }
 body {
   font-family: "Barlow", sans-serif;
-  font-size: 1.125rem;
+  /* font-size: 1.125rem; */
   font-weight: 400;
 }
 img {
@@ -31,49 +31,32 @@ h4,
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 700;
 }
-
-.has-text-gray {
-  color: var(--grayish-blue);
-}
-
-.monograph-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  /* margin: 8rem; */
-  overflow-x: hidden;
-}
-
-.monograph-text-container {
-  max-width: 60ch;
-  margin-left: 8rem;
-}
-.monograph-image {
-  transform: translateX(10%);
-}
 .tagline {
-  display: flex;
-  align-items: center;
+  display: inline-flex;
 }
 .tag {
   background-color: var(--very-dark-blue);
   color: var(--light-grayish-blue);
   font-weight: 700;
   border-radius: 9999px;
-  padding: 0.1rem 1rem;
-  text-transform: uppercase;
+  padding: 0.1rem 0.5rem;
   margin-right: 1rem;
+  text-transform: uppercase;
 }
+
 .spaced-text {
   white-space: nowrap;
   font-weight: 400;
-  letter-spacing: 0.3rem;
   color: var(--grayish-blue);
   text-transform: uppercase;
-  font-size: 1.125rem;
+  letter-spacing: 0.1rem;
+  font-size: 0.875rem;
+}
+.has-text-gray {
+  color: var(--grayish-blue);
 }
 .detail-header {
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   color: var(--very-dark-blue);
   text-transform: uppercase;
   line-height: 1;
@@ -92,36 +75,55 @@ h4,
 .button {
   white-space: nowrap;
   text-transform: uppercase;
-  font-size: 1.5rem;
   border: none;
   background-color: var(--red);
   color: var(--light-grayish-blue);
-  padding: 0.75rem 1.25rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   margin-right: 1rem;
+  font-size: 0.875rem;
 }
-
-@media screen and (max-width: 768px) {
-  .detail-header {
-    font-size: 2.5rem;
+.monograph-container {
+  display: grid;
+}
+.monograph-text-container {
+  order: 2;
+  margin-left: 2rem;
+}
+.monograph-image {
+  transform: translateX(10%);
+  margin-bottom: 4rem;
+}
+@media all and (min-width: 768px) {
+  body {
+    font-size: 1.125rem;
   }
-  .monograph-container {
-    grid-template-columns: 1fr;
+  .detail-header {
+    font-size: 4rem;
   }
   .monograph-text-container {
-    order: 2;
-    margin: 0 2rem;
+    margin-left: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 60ch;
   }
-  .monograph-image-container {
-    margin: 5rem 0;
+  .button {
+    font-size: 1.5rem;
+    padding: 0.75rem 1.25rem;
   }
-  .monograph-image {
-    width: 100%;
-  }
-  .tag,
-  .button,
   .spaced-text {
-    font-size: 0.8rem;
-    letter-spacing: normal;
+    letter-spacing: 0.3rem;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .monograph-container {
+    grid-template-columns: repeat(2, 1fr);
+    overflow-x: hidden;
+  }
+  .monograph-text-container {
+    order: unset;
+    margin-left: 8rem;
   }
 }
