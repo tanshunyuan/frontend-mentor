@@ -1,3 +1,4 @@
+@import url("./component.css");
 :root {
   /* primary */
   --lime-green: hsl(163, 72%, 41%);
@@ -37,6 +38,13 @@ body {
 }
 .social-overview-header {
   color: white;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--dt-text-desaturated-blue);
+  margin: 1rem 0;
 }
 
 .green {
@@ -81,7 +89,11 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 1rem 4rem;
+  padding: 1rem 0;
+}
+.social-overview-header {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 .social-top,
 .social-bottom {
@@ -123,23 +135,40 @@ body {
 .small-number {
   font-size: 1.5rem;
 }
+.twitter::before,
+.facebook::before,
+.instagram::before,
+.youtube::before {
+  content: "";
+  height: 4px;
+  width: 100%;
+  transform: translateY(-15px);
+  border-radius: 1rem 1rem 0 0;
+}
 
-.twitter {
-  border-top: 4px solid var(--twitter);
+.twitter::before {
+  background-color: var(--twitter);
 }
-.facebook {
-  border-top: 4px solid var(--facebook);
+.facebook::before {
+  background-color: var(--facebook);
 }
-.instagram {
-  border-top: 4px solid var(--instagram);
+.instagram::before {
+  background: var(--instagram);
 }
-.youtube {
-  border-top: 4px solid var(--youtube);
+.youtube::before {
+  background-color: var(--youtube);
 }
-@media all and (min-width: 769px) {
+@media all and (min-width: 768px) {
   body {
     margin: 2rem 10rem;
   }
+  .social-dashboard,
+  .social-overview {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (min-width: 1440px) {
   .social-dashboard,
   .social-overview {
     grid-template-columns: repeat(4, 1fr);
