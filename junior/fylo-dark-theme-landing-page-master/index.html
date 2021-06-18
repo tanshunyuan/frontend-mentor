@@ -57,6 +57,13 @@
           </p>
           <button class="btn">Get Started</button>
         </div>
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="./images/bg-curvy-desktop.svg"
+          />
+          <img class="curvy-image" src="./images/bg-curvy-mobile.svg" alt="" />
+        </picture>
       </section>
 
       <section class="product-details">
@@ -185,24 +192,28 @@
         </div>
       </section>
       <section class="newsletter">
-        <div class="newsletter-text">
-          <h2 class="newsletter-title">Get early access today</h2>
-          <p class="newsletter-description">
-            It only takes a minute to sign up and our free starter tier is
-            extremely generous. If you have any questions, our support team
-            would be happy to help you.
-          </p>
-        </div>
-        <div class="control">
-          <input type="text" class="input" placeholder="email@example.com" />
-          <button type="button" class="btn">Get Started For Free</button>
+        <div class="newsletter-container">
+          <div class="newsletter-text">
+            <h2 class="newsletter-title">Get early access today</h2>
+            <p class="newsletter-description">
+              It only takes a minute to sign up and our free starter tier is
+              extremely generous. If you have any questions, our support team
+              would be happy to help you.
+            </p>
+          </div>
+          <div class="control">
+            <input type="text" class="input" placeholder="email@example.com" />
+            <button type="button" class="btn is-fullwidth">
+              Get Started For Free
+            </button>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
+      <img src="./images/logo.svg" class="footer-image" alt="" />
       <div>
-        <img src="./images/logo.svg" class="footer-image" alt="" />
         <div class="text-w-icon">
           <div class="icon">
             <ion-icon name="location-outline"></ion-icon>

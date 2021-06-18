@@ -22,7 +22,7 @@
 
 @media all and (min-width: 768px) {
   .navbar {
-    padding: 6rem 4rem;
+    padding: 5rem 4rem;
   }
   .navbar-item {
     font-size: 1rem;

@@ -18,7 +18,7 @@
 }
 img {
   display: block;
-  /* width: 100%; */
+  max-width: 100%;
 }
 body {
   background-color: var(--bg-main);
@@ -32,6 +32,7 @@ p {
 
 .landing {
   background-color: var(--bg-intro);
+  position: relative;
 }
 .landing-image-wrapper {
   margin: 1rem 1.5rem;
@@ -44,7 +45,15 @@ p {
   text-align: center;
   color: var(--white);
   margin: 1rem 1.5rem;
+  /* to make z-index work */
 }
+
+.landing-details,
+.landing-image-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
 .title {
   font-size: 1.25rem;
 }
@@ -52,24 +61,21 @@ p {
   font-size: 0.75rem;
   margin: 1rem 0;
 }
-@media all and (min-width: 768px) {
-  .product-details {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
-    gap: 1rem;
-  }
-}
 
 .product-details {
+  display: grid;
+  place-items: center;
   margin: 5rem 1.5rem;
+}
+
+.curvy-image {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .marketing-details {
   padding: 4rem 1.5rem;
-}
-.banner {
-  width: 100%;
 }
 .banner-wrapper {
   margin: 2rem 0;
@@ -109,33 +115,6 @@ p {
   transform: translate(0px, -70px);
   z-index: 1;
 }
-.review-card {
-  position: relative;
-  background-color: var(--bg-intro);
-  margin-bottom: 2rem;
-  font-size: 0.75rem;
-  border-radius: 0.25rem;
-  padding: 1rem 1.5rem;
-}
-.review-description {
-  line-height: 1.75;
-  font-size: 0.7rem;
-  margin-bottom: 1em;
-}
-.profile {
-  display: flex;
-  align-items: center;
-}
-.profile-details {
-  font-size: 0.6rem;
-}
-.profile-image {
-  border-radius: 50%;
-  font-size: 1.75rem;
-  width: 1em;
-  height: 1em;
-  margin-right: 1rem;
-}
 
 .footer {
   background-color: var(--bg-footer);
@@ -160,13 +139,21 @@ p {
 }
 
 .newsletter {
-  background-color: var(--bg-intro);
   text-align: center;
+  background: linear-gradient(180deg, #181f2a 45%, #0b1523 45%);
   padding: 2rem 1rem;
+}
+.newsletter-container {
+  /* padding: 0 2rem; */
+  background-color: var(--bg-intro);
+  padding: 1rem;
 }
 .newsletter-title,
 .newsletter-description {
   margin: 1rem;
+}
+.newsletter-title {
+  font-size: 1rem;
 }
 
 .footer > div,
@@ -186,4 +173,66 @@ p {
 
 .social-icons {
   text-align: center;
+}
+
+.is-fullwidth {
+  display: flex;
+  width: 100%;
+}
+
+@media all and (min-width: 769px) {
+  .landing-image {
+    margin: 0 auto;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+  .marketing-description,
+  .card-description {
+    font-size: 1rem;
+  }
+  .product-details {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .landing-image {
+    width: 50%;
+  }
+
+  .marketing-title {
+    font-size: 3rem;
+  }
+
+  .marketing-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+  .reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .newsletter-container {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 0.25rem;
+    padding: 2rem 3rem;
+  }
+
+  .newsletter-title {
+    font-size: 2rem;
+  }
+  .newsletter-description {
+    font-size: 1rem;
+  }
+
+  .footer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
 }
