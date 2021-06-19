@@ -1,0 +1,24 @@
+.navbar-btn {
+  font-size: 1.5rem;
+  width: 1em;
+  height: 1em;
+}
+.navbar-burger {
+  height: 2px;
+  width: 1em;
+  background-color: white;
+}
+.navbar-burger::before,
+.navbar-burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 1em;
+  background-color: white;
+}
+.navbar-burger::before {
+  transform: translateY(-0.5rem);
+}
+.navbar-burger::after {
+  transform: translateY(0.5rem);
+}

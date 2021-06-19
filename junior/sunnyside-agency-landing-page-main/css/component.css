@@ -1,0 +1,25 @@
+.btn,
+.btn-link {
+  border: none;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  background: none;
+}
+.btn {
+  border-radius: 9999px;
+  background-color: var(--yellow);
+  padding: 1rem 2rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  width: 1em;
+  height: 1em;
+}
+@media all and (min-width: 768px) {
+  .btn {
+    color: black;
+    background-color: white;
+  }
+}
