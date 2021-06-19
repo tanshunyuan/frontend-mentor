@@ -20,6 +20,12 @@
   --wt-bg-card-light-grayish-blue: hsl(227, 47%, 96%);
   --wt-text-dark-grayish-blue: hsl(228, 12%, 44%);
   --wt-text-very-dark-blue: hsl(230, 17%, 14%);
+
+  /* default colors */
+  --bg-color: var(--dt-bg-very-dark-blue);
+  --heading-color: var(--white);
+  --text-color: var(--dt-text-desaturated-blue);
+  --card-color: var(--dt-bg-card-desaturated-blue);
 }
 
 * {
@@ -29,15 +35,27 @@
 }
 body {
   font-family: "Inter", sans-serif;
-  background-color: var(--dt-bg-very-dark-blue);
-  margin: 1rem;
+  background: var(--bg-color);
 }
+
+.white-mode {
+  --bg-color: var(--white);
+  --heading-color: var(--wt-text-very-dark-blue);
+  --text-color: var(--wt-text-dark-grayish-blue);
+  --card-color: var(--wt-bg-card-light-grayish-blue);
+}
+
 .title {
-  color: white;
+  color: var(--heading-color);
   font-size: 1.5rem;
 }
 .social-overview-header {
-  color: white;
+  color: var(--heading-color);
+}
+
+.container {
+  max-width: 70rem;
+  margin: 1rem;
 }
 
 .divider {
@@ -58,7 +76,7 @@ body {
 .subtitle,
 .tag,
 .text {
-  color: var(--dt-text-desaturated-blue);
+  color: var(--text-color);
   font-weight: 700;
   font-size: 0.875rem;
 }
@@ -74,7 +92,7 @@ body {
 }
 .number,
 .small-number {
-  color: var(--white);
+  color: var(--heading-color);
   font-weight: 700;
 }
 .social-dashboard,
@@ -84,7 +102,7 @@ body {
 }
 .social-card-big {
   border-radius: 0.5rem;
-  background-color: var(--dt-bg-card-desaturated-blue);
+  background-color: var(--card-color);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -114,7 +132,7 @@ body {
 }
 .social-card-small {
   border-radius: 0.5rem;
-  background-color: var(--dt-bg-card-desaturated-blue);
+  background-color: var(--card-color);
   padding: 1rem;
   width: 100%;
 }
@@ -159,8 +177,11 @@ body {
   background-color: var(--youtube);
 }
 @media all and (min-width: 768px) {
-  body {
-    margin: 2rem 10rem;
+  .divider {
+    display: none;
+  }
+  .container {
+    margin: 2rem 2rem;
   }
   .social-dashboard,
   .social-overview {
@@ -173,5 +194,8 @@ body {
   .social-overview {
     grid-template-columns: repeat(4, 1fr);
     grid-template-columns: repeat(4, 1fr);
+  }
+  .container {
+    margin: 2rem auto;
   }
 }
