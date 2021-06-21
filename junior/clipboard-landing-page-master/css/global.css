@@ -1,0 +1,141 @@
+@import url("./typography.css");
+:root {
+  /* Primary */
+  --strong-cyan: hsl(171, 66%, 44%);
+  --light-blue: hsl(233, 100%, 69%);
+  /* Neutral */
+  --dark-grayish-blue: hsl(210, 10%, 33%);
+  --grayish-blue: hsl(201, 11%, 66%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1.125rem;
+}
+.image {
+  width: 100%;
+  display: block;
+}
+.btn {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 600;
+  border: none;
+  color: white;
+  border-radius: 9999px;
+  font-size: 1.125rem;
+  padding: 1rem 0;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.is-cyan {
+  background-color: var(--strong-cyan);
+}
+.is-blue {
+  background-color: var(--light-blue);
+}
+
+.intro {
+  text-align: center;
+  background-image: url("../images/bg-header-mobile.png");
+  background-repeat: no-repeat;
+  margin-bottom: 6rem;
+}
+.demostration,
+.promotion,
+.brands,
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+.container {
+  margin: 0 1.5rem;
+}
+.text-wrapper {
+  margin: 2rem 0;
+}
+#intro-logo {
+  margin: 7rem 0 4rem 0;
+}
+#footer-logo {
+  width: 15%;
+  margin-bottom: 2.25rem;
+}
+.brands {
+  margin: 8rem 0;
+}
+.brand-image:not(:last-child) {
+  margin-bottom: 4rem;
+}
+.description {
+  margin-bottom: 3rem;
+}
+.link {
+  margin-bottom: 1.5rem;
+}
+.icon {
+  font-size: 1.5rem;
+  width: 1em;
+  height: 1em;
+}
+.social-icons {
+  margin: 2rem 0;
+}
+.social-icons .icon:nth-child(2) {
+  margin: 0 2rem;
+}
+
+@media all and (min-width: 768px) {
+  .intro {
+    background-image: url("../images/bg-header-desktop.png");
+    background-size: cover;
+  }
+  .btn {
+    width: auto;
+    padding: 1rem 2rem;
+  }
+  .banner-with-text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+  .banner-with-text .content .text-wrapper,
+  .links {
+    text-align: left;
+  }
+  .features-content {
+    display: grid;
+  }
+  .brand-image:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .features-content,
+  .footer,
+  .brands {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+  .footer {
+    margin-top: 4rem;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  #computer {
+    transform: translateX(-100px);
+  }
+  #devices {
+    width: 60%;
+  }
+  .container {
+    margin: 0 4rem;
+  }
+  .text-wrapper {
+    max-width: 43ch;
+    margin: 0 auto;
+  }
+}
